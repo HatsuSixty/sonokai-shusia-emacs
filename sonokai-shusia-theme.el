@@ -64,12 +64,6 @@
 The theme has to be reloaded after changing anything in this group."
   :group 'faces)
 
-(defcustom sonokai-shusia-distinct-fringe-background t
-  "Make the fringe background different from the normal background color.
-Also affects 'linum-mode' background."
-  :type 'boolean
-  :group 'sonokai-shusia)
-
 (defcustom sonokai-shusia-use-variable-pitch nil
   "Use variable pitch face for some headings and titles."
   :type 'boolean
@@ -257,10 +251,8 @@ Also affects 'linum-mode' background."
        (sonokai-shusia-green-hc-alt   "#A7DF78")
        (sonokai-shusia-green-lc       sonokai-shusia-green-l)
 
-       ;; Distinct fringe
-       (sonokai-shusia-fringe-bg (if sonokai-shusia-distinct-fringe-background
-                                     sonokai-shusia-gray
-                                   sonokai-shusia-background))
+       ;; Fringe
+       (sonokai-shusia-fringe-bg sonokai-shusia-background)
 
        ;; Definitions for terminals that do not support 256 colors
        (sonokai-shusia-256-class '((class color) (min-colors 89)))
@@ -348,10 +340,8 @@ Also affects 'linum-mode' background."
        (sonokai-shusia-256-green-hc       sonokai-shusia-256-green-d)
        (sonokai-shusia-256-green-lc       sonokai-shusia-256-green-l)
 
-       ;; Distinct fringe
-       (sonokai-shusia-256-fringe-bg (if sonokai-shusia-distinct-fringe-background
-                                         sonokai-shusia-256-gray
-                                       sonokai-shusia-256-background)))
+       ;; Fringe
+       (sonokai-shusia-256-fringe-bg sonokai-shusia-256-background))
 
   ;; Define faces
   (custom-theme-set-faces
